@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask spike;
 
     public GameOver GameOver;
+    public int frames;
     public int points;
     public Text score;
     public bool gameEnded = false;
@@ -53,7 +54,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            points++;
+            frames++;
+            points = frames / 60;
             score.text = points.ToString();
         }
 

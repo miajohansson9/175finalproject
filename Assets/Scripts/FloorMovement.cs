@@ -10,6 +10,9 @@ public class FloorMovement : MonoBehaviour
     private TrapMovement spikes;
     private float time = 0.0f;
     public int floorLimit = 3;
+
+    public int frames;
+    public int points;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,19 @@ public class FloorMovement : MonoBehaviour
 
         if (time != 0.0f) {
             transform.position += Vector3.back * Time.deltaTime * speed;
+        }
+        // if we've reached max speed stop increasing        
+        if (speed >= 14f)
+        {
+            return;
+        }
+
+        // increase the speed by 5% every 10 points
+        frames++;
+        if (frames == 1800)
+        {
+            speed *= 1.1f;
+            frames = 0;
         }
     }
 
