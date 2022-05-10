@@ -6,6 +6,7 @@ public class FloorMovement : MonoBehaviour
 {
     Rigidbody previousGameObject;
     [SerializeField] float speed = 7f;
+    float maxSpeed = 14f;
     private TrapMovement spikes;
     private Trap trap;
     private float time = 0.0f;
@@ -43,7 +44,7 @@ public class FloorMovement : MonoBehaviour
             transform.position += Vector3.back * Time.deltaTime * speed;
         }
         // if we've reached max speed stop increasing        
-        if (speed >= 14f)
+        if (speed >= maxSpeed)
         {
             return;
         }
