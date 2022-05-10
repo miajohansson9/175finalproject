@@ -43,16 +43,16 @@ public class FloorMovement : MonoBehaviour
             transform.position += Vector3.back * Time.deltaTime * speed;
         }
         // if we've reached max speed stop increasing        
-        if (speed >= 14f)
+        if (speed >= 12f)
         {
             return;
         }
 
-        // increase the speed by 5% every 10 points
+        // increase the speed by 4% every 10 points
         frames++;
         if (frames == 1800)
         {
-            speed *= 1.05f;
+            speed *= 1.04f;
             frames = 0;
         }
     }
