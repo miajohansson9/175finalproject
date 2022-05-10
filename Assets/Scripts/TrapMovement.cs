@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrapMovement : MonoBehaviour
 {
-    private FloorMovement floor;
     private float time = 0.0f;
     public float min;
     public float max;
