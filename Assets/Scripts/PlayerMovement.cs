@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
     [SerializeField] LayerMask lava;
+    [SerializeField] Transform frontCheck;
+    [SerializeField] LayerMask spike;
 
     public GameOver GameOver;
     public int points;
@@ -44,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
             gameEnded = true;
             GameOver.Setup(points);
         }
+        else if (TouchedSpike())
+        {
+            gameEnded = true;
+            GameOver.Setup(points);
+        }
         else
         {
             points++;
@@ -60,5 +67,10 @@ public class PlayerMovement : MonoBehaviour
     bool TouchedLava()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, lava);
+    }
+
+    bool TouchedSpike()
+    {
+        return Physics.CheckSphere(frontCheck.position, .3f, spike);
     }
 }

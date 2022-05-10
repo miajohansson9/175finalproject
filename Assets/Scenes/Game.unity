@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 298252341}
   - component: {fileID: 298252340}
   - component: {fileID: 298252339}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 396472217}
   - component: {fileID: 396472216}
   - component: {fileID: 396472215}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Lava
   m_TagString: Lava
   m_Icon: {fileID: 0}
@@ -754,6 +754,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729060654}
   m_CullTransparentMesh: 1
+--- !u!1 &902112794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902112795}
+  m_Layer: 0
+  m_Name: FrontCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902112795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902112794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2094779567}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +887,10 @@ PrefabInstance:
     - target: {fileID: 1578417976068654, guid: 8b39d7d5727930f4b9fdc2111bebf3bd, type: 3}
       propertyPath: m_Name
       value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578417976068654, guid: 8b39d7d5727930f4b9fdc2111bebf3bd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1578417976068654, guid: 8b39d7d5727930f4b9fdc2111bebf3bd, type: 3}
       propertyPath: m_TagString
@@ -1535,6 +1570,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   - {fileID: 449053257}
+  - {fileID: 902112795}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1571,10 +1607,14 @@ MonoBehaviour:
   groundCheck: {fileID: 449053257}
   ground:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   lava:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
+  frontCheck: {fileID: 902112795}
+  spike:
+    serializedVersion: 2
+    m_Bits: 64
   GameOver: {fileID: 1685809179}
   points: 0
   score: {fileID: 551039241}
