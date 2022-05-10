@@ -34,11 +34,11 @@ public class FloorMovement : MonoBehaviour
     void GenerateFloors()
     {
         Instantiate(gameObject, new Vector3(previousGameObject.transform.position.x, previousGameObject.transform.position.y + 1f,
-                       previousGameObject.transform.position.z + 20f),Quaternion.Euler(0, 0, 0));
+                       previousGameObject.transform.position.z + 14f),Quaternion.Euler(0, 0, 0));
     }
 
     void OnBecameInvisible() {
-        transform.position = new Vector3(transform.position.x, transform.position.y + (1f * floorLimit), (transform.position.z + 20f * floorLimit));
+        transform.position = new Vector3(transform.position.x, transform.position.y + (1f * floorLimit), (transform.position.z + 14f * floorLimit));
         spikes.min = spikes.min + (1f * floorLimit);
         spikes.max = spikes.min + spikes.diff;
     }

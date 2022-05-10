@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrapMovement : MonoBehaviour
 {
-    //[SerializeField] float speed = 7f;
     private FloorMovement floor;
     private float time = 0.0f;
     public float min;
@@ -14,7 +13,7 @@ public class TrapMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        diff = Random.Range(0.5f, 1.5f);
+        diff = Random.Range(0.5f, 1.3f);
         min = transform.position.y;
         max = transform.position.y + diff;
     }
