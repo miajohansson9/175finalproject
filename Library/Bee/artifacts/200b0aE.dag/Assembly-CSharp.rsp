@@ -347,6 +347,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/FloorMovement.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Trap.cs"
 "Assets/Scripts/TrapMovement.cs"
 -langversion:9.0
 

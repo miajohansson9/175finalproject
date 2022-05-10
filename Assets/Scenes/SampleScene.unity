@@ -584,11 +584,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
+--- !u!1 &1888830864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1457306901750400, guid: 8b39d7d5727930f4b9fdc2111bebf3bd, type: 3}
+  m_PrefabInstance: {fileID: 880916806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1888830866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4596803776533538, guid: 8b39d7d5727930f4b9fdc2111bebf3bd, type: 3}
   m_PrefabInstance: {fileID: 880916806}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888830867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888830864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945533e952004445294c6e6b1b0daa6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2094779563
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094779563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 0, z: -4.63}
+  m_LocalPosition: {x: 0.44, y: 0, z: -6.31}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
