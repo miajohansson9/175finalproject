@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float speed = 7f;
-    [SerializeField] float jumpForce = 10f;
+    [SerializeField] float jumpForce = 7f;
 
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
