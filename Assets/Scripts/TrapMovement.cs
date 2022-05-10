@@ -12,7 +12,7 @@ public class TrapMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        diff = Random.Range(0.5f, 1.3f);
+        diff = Random.Range(0.5f, 1f);
         min = transform.position.y;
         max = transform.position.y + diff;
     }
