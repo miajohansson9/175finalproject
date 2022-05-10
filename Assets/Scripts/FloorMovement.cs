@@ -5,7 +5,9 @@ using UnityEngine;
 public class FloorMovement : MonoBehaviour
 {
     Rigidbody previousGameObject;
+    GameObject trap;
     [SerializeField] float speed = 7f;
+    private TrapMovement spikes;
     private float time = 0.0f;
     public int floorLimit = 3;
     
@@ -16,6 +18,7 @@ public class FloorMovement : MonoBehaviour
             Invoke("GenerateFloors", 0f);
         }
         previousGameObject = GetComponent<Rigidbody>();
+        spikes = transform.GetChild(0).GetChild(1).GetComponent<TrapMovement>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,8 @@ public class FloorMovement : MonoBehaviour
 
     void OnBecameInvisible() {
         transform.position = new Vector3(transform.position.x, transform.position.y + (1f * floorLimit), (transform.position.z + 20f * floorLimit));
+        spikes.min = spikes.min + (1f * floorLimit);
+        spikes.max = spikes.min + spikes.diff;
     }
 }
 
