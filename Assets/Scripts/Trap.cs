@@ -13,10 +13,8 @@ public class Trap : MonoBehaviour
     {
         xDim = Random.Range(0.05f, 0.19f);
         transform.localScale = new Vector3(xDim, transform.localScale.y, transform.localScale.z);
-        zPos = Random.Range(transform.parent.position.z - 8f, transform.parent.position.z + 8f);
-        xPos = Random.Range(transform.parent.position.x - ((transform.parent.lossyScale.x - transform.lossyScale.x)/2),
-                            transform.parent.position.x + ((transform.parent.lossyScale.x - transform.lossyScale.x)/2));
+        zPos = Random.Range(transform.parent.position.z - 6f, transform.parent.position.z + 6f);
+        xPos = Random.Range(transform.parent.position.x - 1.5f,transform.parent.position.x + 1.5f);
         transform.position = new Vector3(xPos, transform.position.y, zPos);
     }
-
 }
