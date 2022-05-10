@@ -55,7 +55,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             frames++;
-            points = frames / 60;
+            if (frames == 60)
+            {
+                frames = 0;
+                points++;
+            }
             score.text = points.ToString();
         }
 
