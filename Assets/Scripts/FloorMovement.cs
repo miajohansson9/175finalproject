@@ -53,7 +53,7 @@ public class FloorMovement : MonoBehaviour
         frames++;
         if (frames == 900)
         {
-            speed *= 1.08f;
+            speed *= 1.05f;
             frames = 0;
         }
     }
