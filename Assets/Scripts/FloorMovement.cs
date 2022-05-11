@@ -50,9 +50,9 @@ public class FloorMovement : MonoBehaviour
 
         // increase the speed by 5% every 10 points
         frames++;
-        if (frames == 1800)
+        if (frames == 900)
         {
-            speed *= 1.05f;
+            speed *= 1.08f;
             frames = 0;
         }
     }
